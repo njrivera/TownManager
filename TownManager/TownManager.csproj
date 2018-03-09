@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F82F698-C3AC-4214-8A84-012DCBA3DFA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TownManager</RootNamespace>
+    <AssemblyName>TownManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuxFunctions.cs" />
+    <Compile Include="Building.cs" />
+    <Compile Include="Buildings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buildings.Designer.cs">
+      <DependentUpon>Buildings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoodDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoodDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoodInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoodInfo.Designer.cs">
+      <DependentUpon>DoodInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InProgress.Designer.cs">
+      <DependentUpon>InProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMessage.Designer.cs">
+      <DependentUpon>GameMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs" />
+    <Compile Include="Militia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Militia.Designer.cs">
+      <DependentUpon>Militia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankInfo.Designer.cs">
+      <DependentUpon>RankInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tax.Designer.cs">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerInfo.Designer.cs">
+      <DependentUpon>WorkerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dood.cs" />
+    <Compile Include="Employment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employment.Designer.cs">
+      <DependentUpon>Employment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthFunctions.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Globals.cs" />
+    <EmbeddedResource Include="Buildings.resx">
+      <DependentUpon>Buildings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doodInfo.resx">
+      <DependentUpon>DoodInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InProgress.resx">
+      <DependentUpon>InProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMessage.resx">
+      <DependentUpon>GameMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Militia.resx">
+      <DependentUpon>Militia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankInfo.resx">
+      <DependentUpon>RankInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tax.resx">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerInfo.resx">
+      <DependentUpon>WorkerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment.resx">
+      <DependentUpon>Employment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DoodDatabaseDataSet.xsc">
+      <DependentUpon>DoodDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DoodDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoodDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DoodDatabaseDataSet.xss">
+      <DependentUpon>DoodDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Dood.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kvasir_fortress_by_raphael_lacoste-d9f97yk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BpGpDoP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-texture-old-paper-scroll-paper-download-photo-texture-3SAB6i-clipart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medieval_science_room_by_gurgur-d4bvx27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renaissance_room_by_shutupandwhisper-d6w2cp2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parchment_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\antique-scroll-parchment-black-background-medieval-natural-old-grunge-paper-texture-48017869.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patterns_lines_bright_color_surface_texture_50511_1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DoodDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DoodDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DoodDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
